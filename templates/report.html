@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Authenticity Report</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background Gradient Animation */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(45deg, pink, lightblue, pink);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite; /* Animation for moving gradient */
+        }
+
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 1200px; /* Increased width */
+            width: 100%;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            opacity:0.7;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+            border: 4px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        .score-box {
+            padding: 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #ffffff;
+            display: inline-block;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .very-high-similarity {
+            background-color: #ff0000; /* Very High (above 75%) -> Dark Red */
+        }
+
+        .high-similarity {
+            background-color: #f35611; /* High (between 50% and 75%) -> Red */
+        }
+
+        .medium-similarity {
+            background-color: #e1b009; /* Medium (between 20% and 50%) -> Yellow */
+            color: #ffffff;
+        }
+
+        .low-similarity {
+            background-color: #00cc00; /* Low (up to 20%) -> Green */
+        }
+
+        .similarity-percentage {
+            font-weight: bold;
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 3px 6px;
+            margin: 2px;
+            display: inline-block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 15px;
+            color: #fff;
+            background-color: #6c757d;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Assignment Authenticity Report</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Document Name</th>
+                    <th>AI-Generated Percentage</th>
+                    <th>Similarity Scores</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doc in documents %}
+                <tr>
+                    <td>{{ doc }}</td>
+                    <td>
+                        <div class="score-box 
+                            {% if ai_scores[doc] > 75 %}very-high-similarity{% elif ai_scores[doc] > 50 %}high-similarity{% elif ai_scores[doc] > 20 %}medium-similarity{% else %}low-similarity{% endif %}">
+                            {{ ai_scores[doc] }}%
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for (doc1, doc2), score in similarity_scores.items() %}
+                                {% if doc1 == doc %}
+                                    <li>
+                                        {{ doc2 }}: 
+                                        <span class="similarity-percentage 
+                                            {% if score > 75 %}very-high-similarity{% elif score > 50 %}high-similarity{% elif score > 20 %}medium-similarity{% else %}low-similarity{% endif %}">
+                                            {{ score }}%
+                                        </span>
+                                    </li>
+                                {% elif doc2 == doc %}
+                                    <li>
+                                        {{ doc1 }}: 
+                                        <span class="similarity-percentage 
+                                            {% if score > 75 %}very-high-similarity{% elif score > 50 %}high-similarity{% elif score > 20 %}medium-similarity{% else %}low-similarity{% endif %}">
+                                            {{ score }}%
+                                        </span>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="btn">Upload More Files</a>
+    </div>
+</body>
+</html>
