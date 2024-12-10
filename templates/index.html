@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Assignments</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/static/index.jpg'); /* Path to your image */
+            background-size: cover;  /* Ensure the image covers the entire screen */
+            background-position: center;  /* Centers the background image */
+            background-repeat: no-repeat;  /* Prevents the image from repeating */
+            
+        }
+
+        .upload-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #343a40;
+            
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-label {
+            font-size: 16px;
+            color: #495057;
+            display: block;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn:active {
+            background-color: #004085;
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .upload-container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .form-control {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                height: 100vh;
+                margin: 0;
+            }
+    
+            .skeleton {
+                background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+                background-size: 200% 100%;
+                animation: shimmer 1.5s infinite;
+                border-radius: 4px;
+            }
+    
+            .skeleton-card {
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 16px;
+                width: 400px;
+                gap: 16px;
+                height: 100px;
+            }
+    
+    
+            .skeleton-text {
+                flex: 1;
+            }
+    
+            .skeleton.title {
+                width: 60%;
+                height: 16px;
+                margin-bottom: 8px;
+            }
+    
+            .skeleton.line {
+                width: 100%;
+                height: 12px;
+                margin-bottom: 8px;
+            }
+    
+            @keyframes shimmer {
+                0% {
+                    background-position: 200% 0;
+                }
+    
+                100% {
+                    background-position: -200% 0;
+                }
+            }
+            .loader123{
+                display:none;
+            }
+        
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    <div style="width:100%;height:100%" class="loader123">
+        <div style="width: 87vw;margin: auto;padding: 10px;background-color: white;border-radius: 10px;margin-top: 30px;">
+            <div class="skeleton line" style="width: 84vw;;padding-top: 18px;margin: 10px;">
+            </div>
+        </div>
+    
+        <div style="display: flex; gap: 30px;flex-wrap: wrap;justify-content: center;margin-top: 60px;">
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+    
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+    
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-text">
+                    <div class="skeleton title"></div>
+                    <div class="skeleton line"></div>
+                    <div class="skeleton line"></div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="upload-container">
+        <h2>Upload Student Assignments</h2>
+        <form id="uploadForm" action="/" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file" class="form-label">Select ZIP file</label>
+                <input type="file" class="form-control" id="file" name="file" accept=".zip" required>
+            </div>
+            <button type="submit" class="btn">Upload and Analyze</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("uploadForm").onsubmit = function () {
+            const fileInput = document.getElementById("file");
+            if (!fileInput.value.endsWith(".zip")) {
+                alert("Please upload a ZIP file.");
+                return false;
+            }
+            else{
+                document.getElementsByClassName("loader123")[0].style.display = "block";
+                document.getElementsByClassName("upload-container")[0].style.display = "none";
+                document.getElementsByTagName("body")[0].style.backgroundImage = "none";
+
+            }
+        };
+    </script>
+</body>
+</html>
