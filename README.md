@@ -1,5 +1,6 @@
-This repository contains a Flask application (app.py) that you can run on your local machine. Follow these steps to set up the environment and dependencies:
+I have made an Flask Application which helps teachers to find how many students submitted their theory assignments through AI and how many of them have copied their friend work. I have also made report Project_Report.pdf present in the repository for the workflow of calculating AI generated percentage and similarity score.
 
+This repository contains a Flask application (app.py) that you can run on your local machine. Follow these steps to set up the environment and dependencies:
 1. Install Python 3.10
 First, ensure that you have Python 3.10 installed on your local machine. If you don't have it yet, you can download and install it from the official Python website.
 Note: I've already uploaded the Python 3.10 version in this repository, so you don't need to worry if you don't have it yet.
