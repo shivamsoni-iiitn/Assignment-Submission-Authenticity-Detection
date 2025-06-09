@@ -1,4 +1,4 @@
-I have made an Flask Application which helps teachers to find how many students submitted their theory assignments through AI and how many of them have copied their friend work. I have also made report Project_Report.pdf present in the repository for the workflow of calculating AI generated percentage and similarity score.
+I have made a Flask Application which helps teachers to find how many students submitted their theory assignments through AI and how many of them have copied their friend work. I have also made report Project_Report.pdf present in the repository for the workflow of calculating AI generated percentage and similarity score.
 
 This repository contains a Flask application (app.py) that you can run on your local machine. Follow these steps to set up the environment and dependencies:
 1. Install Python 3.10
